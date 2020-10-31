@@ -1,0 +1,35 @@
+.input {
+  min-height: 30px;
+  width: 300px;
+  background-color: transparent;
+  border: 1px #555 solid;
+  border-radius: 5px;
+  margin: 3px 5px;
+  padding: 3px 7px;
+  outline: none !important;
+  color: #ccc;
+}
+.input:focus {
+  background-color: #363b46;
+}
+.submit {
+  min-height: 38px;
+  min-width: 90px;
+  margin: 3px 5px;
+  padding: 3px 7px;
+  background-color: #48c774;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: #282c34;
+}
+.submit:hover {
+  cursor: pointer;
+  background-color: #1ce863;
+}
+
+.phrase {
+  max-width: 416px;
+  color: white;
+  margin: 10px auto;
+  text-align: start;
+}
