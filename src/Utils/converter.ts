@@ -20,7 +20,7 @@ const arabDigit: MapNum = {
   "٩": 9,
 };
 export function numConverter(num: string) {
-  // const arr = num.match(/(\d{1,3})(?=(\d{3})+(?!\d)|$)/g);
+  if (num === "") return "";
   const digits = num.split("").reverse();
 
   let tdp: string = "";

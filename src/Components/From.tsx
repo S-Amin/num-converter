@@ -9,9 +9,7 @@ const Form: React.FC<FormProps> = () => {
     const val =
       (document.getElementById("input-number") as HTMLInputElement)?.value ||
       "";
-    console.log({ val });
-    if (val === "") setPhrase("");
-    else setPhrase(numConverter(val));
+    setPhrase(numConverter(val));
   };
 
   return (
