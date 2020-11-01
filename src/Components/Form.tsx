@@ -15,7 +15,13 @@ const Form: React.FC<FormProps> = () => {
   return (
     <>
       <form>
-        <input type="text" className="input" id="input-number" />
+        <header className="App-header">Number Converter</header>
+        <input
+          type="text"
+          className="input"
+          id="input-number"
+          placeholder="Enter Number"
+        />
         <button type="button" className="submit" onClick={onSubmit}>
           Submit
         </button>

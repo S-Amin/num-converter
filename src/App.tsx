@@ -1,11 +1,10 @@
 import React from "react";
-import Form from "./Components/From";
+import Form from "./Components/Form";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">Number Converter</header>
       <Form />
     </div>
   );
