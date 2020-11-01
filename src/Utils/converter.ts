@@ -21,15 +21,17 @@ const arabDigit: MapNum = {
 };
 export function numConverter(num: string) {
   if (num === "") return "";
-  const digits = num.split("").reverse();
+  const digits = num.split("").reverse(); // split the digit e.g. 123 into [3,2,1]
 
-  let tdp: string = "";
-  let phrase: string[] = [];
+  let tdp: string = ""; // total digit phrase for each 3 digits part
+  let phrase: string[] = []; // the result phrase
   for (let i = 1; i <= digits.length; i++) {
-    const dg = arabDigit[digits[i - 1]];
+    const dg = arabDigit[digits[i - 1]]; // get English number for the arabic number
+
+    // if the character is undefine means the value of "num" is not the write format
     if (dg === undefined) return "";
 
-    const r = i % 3;
+    const r = i % 3; // position of the digit in 3 parted sections
     switch (r) {
       case 0:
         // third digit
@@ -51,7 +53,9 @@ export function numConverter(num: string) {
     }
   }
   if (tdp) phrase.push(tdp);
-  if (phrase.length > 3) return "out of range";
+
+  if (phrase.length > 3) return "out of range"; // bigger than the dictionary that is provided
+
   return phrase.reduce((fullPhrase, val, i) => {
     const t = 1000 ** i;
     return t > 1 ? `${val} ${dic[t]} ${fullPhrase}` : val;
