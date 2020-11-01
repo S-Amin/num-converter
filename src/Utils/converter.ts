@@ -51,7 +51,7 @@ export function numConverter(num: string) {
     }
   }
   if (tdp) phrase.push(tdp);
-
+  if (phrase.length > 3) return "out of range";
   return phrase.reduce((fullPhrase, val, i) => {
     const t = 1000 ** i;
     return t > 1 ? `${val} ${dic[t]} ${fullPhrase}` : val;
